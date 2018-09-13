@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Planeta } from "./planeta";
 
 @Component({
     selector:'planeta',
@@ -8,18 +9,6 @@ import { Component, Input } from "@angular/core";
 
 export class PlanetaComponent{
 
-    @Input() dados
-
-    titulo:string = '';
-    imagem:string = '';
-    descricao:string = '';
-
-    ngOnInit(){
-        this.titulo = this.dados.titulo;
-        this.imagem = this.dados.imagem;
-        this.descricao = this.dados.conteudo;
-    };
-
-   
+    @Input('dados   ') planeta = new Planeta();   
 
 }
